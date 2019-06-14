@@ -1,3 +1,11 @@
+html,
+body {
+    padding:0;
+    text-align:center;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
 .peepsList {    
     margin:0 auto;
     display: flex;
@@ -28,12 +36,28 @@
     font-style: italic;
 }
 
-body {
-    margin:50px 0; 
-    padding:0;
-    text-align:center;
+.navbar-fixed-top .nav {
+    padding: 15px 0;
 }
 
-html {
-    font-family: 'Open Sans', sans-serif;
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+.login {
+margin-bottom:5px;
+}
+
+.dropdown-menu {
+    width: 300px !important;
 }

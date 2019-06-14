@@ -1,0 +1,39 @@
+.peepsList {    
+    margin:0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 60%;
+    padding: 2px 16px;
+}
+
+.peep {
+    background-color: lightblue;
+    margin: 15px;
+    padding: 15px;
+    min-width: 90px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: left;
+    vertical-align: top;
+    flex-grow: 1;
+}
+
+.peep:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.peep p {
+    font-style: italic;
+}
+
+body {
+    margin:50px 0; 
+    padding:0;
+    text-align:center;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}

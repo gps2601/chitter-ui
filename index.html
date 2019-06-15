@@ -43,7 +43,7 @@
             <ul class="nav navbar-nav navbar-right" id="loginStuff">
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
                 <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
-                <form class="form-horizontal"  method="post" accept-charset="UTF-8">
+                <form class="form-horizontal" id="signupSubmit" method="post" accept-charset="UTF-8">
                   <input id="su_uname" class="form-control login" type="text" name="sp_uname" placeholder="Username.." />
                   <input id="su_pass" class="form-control login" type="password" name="sp_pass" placeholder="Password.."/>
                   <input class="btn btn-primary" type="submit" name="submit" value="Sign up!" />
@@ -68,6 +68,11 @@
         </div>
         </nav>
   <h1 id="title"><img src="https://image.flaticon.com/icons/svg/8/8800.svg" style="max-width: 30px"> Chitter</h1>
-  <div id="peepsList" class="peepsList"></div>
+  <div id="tweetbox" style="display:none;">
+      <textarea id="tweetbox_text" class="md-textarea form-control" placeholder="What's happening?"></textarea>
+      <button id="tweetbox_button" class="btn btn-primary">Post!</button>
+  </div>
+  <div id="peepsList" class="peepsList">
+  </div>
 </body>
 </html>

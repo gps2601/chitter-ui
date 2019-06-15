@@ -1,5 +1,5 @@
-var userId;
-var sessionKey;
+let userId;
+let sessionKey;
 
 $(document).ready(() => {
   $.get('https://chitter-backend-api.herokuapp.com/peeps', (data) => {
@@ -13,22 +13,23 @@ $(document).ready(() => {
     });
   });
 
-  $("#loginSubmit").submit(function (event) {
+  $('#loginSubmit').submit((event) => {
     event.preventDefault();
-    var username = $("#li_uname").val();
-    var pass = $("#li_pass").val();
-    console.log(username);
-    console.log(pass);
+    const username = $('#li_uname').val();
+    const pass = $('#li_pass').val();
 
     $.ajax({
       type: 'POST',
       url: 'https://chitter-backend-api.herokuapp.com/sessions',
-      data: JSON.stringify({"session": {"handle": username, "password": pass}}),
+      data: JSON.stringify({ session: { handle: username, password: pass } }),
       contentType: 'application/json',
-      success: function (data) {
-          userId = data.user_id;
-          sessionKey = data.session_key;
-      }
-  });
+      success(data) {
+        userId = data.user_id;
+        sessionKey = data.session_key;
+        $('#loginStuff').hide();
+        $('#loggedInStuffText').text(`You're logged in as user ${userId}`);
+        $('#loggedInStuff').show();
+      },
+    });
   });
 });

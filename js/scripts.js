@@ -67,7 +67,7 @@ $(document).ready(() => {
       data: JSON.stringify({ peep: { user_id: userId, body: peepText } }),
       contentType: 'application/json',
       success() {
-        $( "#peepsList" ).empty();
+        $('#peepsList').empty();
         loadTweets();
       },
     });
